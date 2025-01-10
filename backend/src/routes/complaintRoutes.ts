@@ -40,9 +40,9 @@ complaintRouter.use("/*" ,async (req:Request ,res:Response, next:NextFunction) :
 
 const upload = multer({ dest: 'uploads/' });
 cloudinary.v2.config({
-    cloud_name: 'dbjsyhkrx',
-    api_key:'547317118279164',
-    api_secret: 'YTnA0c46XGCfEqM3yMCrANgO2OU',
+    cloud_name:process.env.CLOUD_NAME,
+    api_key:process.env.API_KEY,
+    api_secret:process.env.CLOUD_API_KEY_SECRET,
   });
 
   complaintRouter.post("/filecomplaint", upload.single("file"), async (req:Request, res:Response):Promise<any> => {
