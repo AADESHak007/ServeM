@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/routes/addressroutes.ts","./src/routes/userroutes.ts"],"version":"5.7.2"}
+{"root":["./src/index.ts","./src/routes/addressroutes.ts","./src/routes/binroutes.ts","./src/routes/complaintroutes.ts","./src/routes/userroutes.ts"],"version":"5.7.2"}

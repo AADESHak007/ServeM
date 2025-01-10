@@ -72,9 +72,7 @@ userRouter.post("/signin", async (req: Request, res: Response): Promise<any> => 
         if (!process.env.JWT_SECRET) {
             return res.status(500).json({ msg: "JWT secret is not defined." });
         }
-        const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET ,{
-            expiresIn: "1h",
-        });
+        const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET);
 
         return res.status(200).json({
             msg: "Signin successful.",

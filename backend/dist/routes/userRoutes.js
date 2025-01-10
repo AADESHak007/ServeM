@@ -71,9 +71,7 @@ userRouter.post("/signin", (req, res) => __awaiter(void 0, void 0, void 0, funct
         if (!process.env.JWT_SECRET) {
             return res.status(500).json({ msg: "JWT secret is not defined." });
         }
-        const token = jsonwebtoken_1.default.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, {
-            expiresIn: "1h",
-        });
+        const token = jsonwebtoken_1.default.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET);
         return res.status(200).json({
             msg: "Signin successful.",
             token,

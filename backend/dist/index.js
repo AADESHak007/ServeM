@@ -9,6 +9,8 @@ const addressRoutes_1 = __importDefault(require("./routes/addressRoutes"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
+const complaintRoutes_1 = __importDefault(require("./routes/complaintRoutes"));
+const binRoutes_1 = __importDefault(require("./routes/binRoutes"));
 dotenv_1.default.config({
     path: "./.env"
 });
@@ -18,6 +20,8 @@ app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use("/api/v1/user", userRoutes_1.default);
 app.use("/api/v1/address", addressRoutes_1.default);
+app.use("/api/v1/complaint", complaintRoutes_1.default);
+app.use("/api/v1/ebin", binRoutes_1.default);
 app.get('/', (req, res) => {
     res.send('Hello from the MAPserver');
 });

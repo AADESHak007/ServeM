@@ -14,11 +14,12 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String    @unique
-  password  String
-  addresses Address[]
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String    @unique
+  password   String
+  addresses  Address[]
+  complaints Complaints[]
 }
 
 model Address {
@@ -33,4 +34,20 @@ model Address {
   Country      String        
 }
 
+model Complaints {
+  id              Int @id @default(autoincrement())
+  userId          Int
+  user            User    @relation(fields: [userId], references: [id])
+  complaintImage  String
+  complaint       String
+}
+
+model Ebins {
+  id              String    @id  @default(uuid())
+  binLat          Decimal
+  binLong         Decimal
+  binStatus       Int        @default(0)
+  binLastCleaned  DateTime?
+  binInstalled    DateTime?  
+}
 

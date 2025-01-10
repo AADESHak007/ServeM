@@ -7,24 +7,24 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
-    question: "How do I update my billing information?",
+    question: "Q. What is the Smart E-Bin App?",
+    answer:
+      "The Smart E-Bin App is a smart waste management solution that allows users to locate nearby electronic bins (e-bins), check their fill levels, and access data insights through charts, maps, and analytics.",
+  },
+  {
+    question: "Q. How can I contact customer support?",
     answer:
       "To contact customer support, look for a 'Contact us' or 'Help' button or link on the website or platform. You may be able to email, call, or chat with customer support for assistance.",
   },
   {
-    question: "How can I contact customer support?",
+    question: "Q. How do the fill level indicators work?",
     answer:
-      "To contact customer support, look for a 'Contact us' or 'Help' button or link on the website or platform. You may be able to email, call, or chat with customer support for assistance.",
+      "The e-bins are equipped with sensors that monitor the fill level in real-time. The app displays this data as percentages (e.g., 25%, 50%, 75%, or 100%) using color-coded markers for easy identification.",
   },
   {
-    question: "How do I update my profile information?",
+    question: "Q. Can I report a damaged or malfunctioning bin?",
     answer:
-      "To contact customer support, look for a 'Contact us' or 'Help' button or link on the website or platform. You may be able to email, call, or chat with customer support for assistance.",
-  },
-  {
-    question: "How do I find my purchase history?",
-    answer:
-      "To contact customer support, look for a 'Contact us' or 'Help' button or link on the website or platform. You may be able to email, call, or chat with customer support for assistance.",
+      "Yes, the app includes a feature to report issues with bins. Simply select the bin on the map and tap the “Report Issue” button to notify the appropriate authorities.",
   },
 ];
 
